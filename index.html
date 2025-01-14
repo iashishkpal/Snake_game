@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <title>Team B Snake Game</title>
+</head>
+<body>
+
+   <audio id="startSound" src="sounds/game-start.mp3" preload="auto"></audio>
+
+   <!-- Background Container -->
+   <div class="background-container">
+      <img src="https://wallpapers.com/images/hd/cute-snake-game-character-8m6scx5j8ivp9lcv.jpg" alt="Background" class="background-image">
+   </div>
+
+   <!-- Game Logo -->
+   <div class="logo-container">
+      <img src="https://i.pinimg.com/736x/29/15/73/291573a3e1881257f672d8b770c5c897.jpg" alt="Snake Game Logo" class="game-logo">
+   </div>
+
+   <!-- Start Screen -->
+   <div id="startScreen" class="screen">
+      <h1>Welcome to Snake Game</h1>
+      <p>Use arrow keys to control the snake. Avoid obstacles and eat the food to grow!</p>
+      <button id="startButton">Start Game</button>
+      <div class="theme-selector">
+         <label for="theme">Select Theme:</label>
+         <select id="theme">
+            <option value="dark">Dark</option>
+            <option value="light">Light</option>
+         </select>
+      </div>
+   </div>
+
+   <!-- Game Screen -->
+   <div id="gameScreen" class="hidden">
+      <header>
+         <h1>Snake Game</h1>
+         <div class="scoreboard">
+            <span>Score: <span id="score">0</span></span>
+            <span>Level: <span id="level">1</span></span>
+         </div>
+         <button id="pauseButton">Pause</button>
+      </header>
+      <canvas id="gameCanvas" width="400" height="400"></canvas>
+   </div>
+
+   <!-- On-Screen Movement Controls -->
+   <div class="controls">
+      <button id="upButton">↑</button>
+      <div class="middle-buttons">
+         <button id="leftButton">←</button>
+         <button id="downButton">↓</button>
+         <button id="rightButton">→</button>
+      </div>
+   </div>
+</div>
+
+   <!-- Game Over Screen -->
+   <div id="gameOverScreen" class="screen hidden">
+      <h1>Game Over</h1>
+      <p>Your Score: <span id="finalScore">0</span></p>
+      <button id="restartButton">Restart Game</button>
+      <button id="mainMenuButton">Main Menu</button>
+   </div>
+
+   <script src="script.js"></script>
+</body>
+</html>
